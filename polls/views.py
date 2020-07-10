@@ -11,8 +11,8 @@ def index(request):
     return render(request, 'polls/index.html', context)
 
 
-def get_student(request, student_id):
-    classroom = Classroom.objects.get(id=student_id)
+def get_student(request, classroom_id):
+    classroom = Classroom.objects.get(id=classroom_id)
     student = Student.objects.filter(classroom=classroom)
     context = {
         'data': student

@@ -4,5 +4,5 @@ from polls import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('<int:student_id>/', views.get_student, name='student')
+    path('<int:classroom_id>/', views.get_student, name='student')
 ]
